@@ -1,0 +1,97 @@
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-transform: capitalize;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 80px;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-sizing: border-box;
+        background: rgba(0, 0, 0, 0.6);
+        border-bottom: 1px solid #fff;
+        z-index: 100;
+    }
+
+    .nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+
+    .nav ul li a {
+        line-height: 60px;
+        color: #ffffff;
+        padding: 12px 20px;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: bold;
+        text-transform: uppercase;
+        white-space: nowrap;
+        
+    }
+
+    .nav ul li a:hover {
+        background: rgba(0, 0, 0, 0.7);
+        border-radius: 6px;
+    }
+
+    .container {
+        position: relative;
+        padding-top: 100px;
+        min-height: calc(100vh - 100px);
+        background-image: url('Wallpaper.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .container h1 {
+        color: #000000;
+        font-size: 45px;
+        text-transform: uppercase;
+        font-weight: 900;
+        letter-spacing: 2px;
+        text-align: center;
+        padding: 15px;
+        margin-bottom: 20px;
+        text-shadow: 0 0 10px #1e1e1e;
+    }
+
+    .container .video-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    @media only screen and (max-width: 768px) {
+        .nav {
+            padding: 10px;
+        }
+
+        .nav ul li a {
+            padding: 12px 10px;
+        }
+
+        .container h1 {
+            font-size: 30px;
+        }
+    }

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mystyle.css">
+    <title>Life Advices</title>
+</head>
+
+<body>
+    <header>
+        <nav class="nav">
+            <a>InspireStream</a>
+            <div class="mid-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="life.html">Life Advices</a></li>
+                    <li><a href="love.html">Love Advices</a></li>
+                    <li><a href="schoolnwork.html">School & Work Advices</a></li>
+                    <li><a href="aboutus.html">About</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Life Advices</h1>
+        <div class="video-container">
+            <div class="video">
+                <video src="life advices/L1.mp4"></video>
+                <div class="text-overlay">Stoic Advice For Hard Days</div>
+            </div>
+            <div class="video">
+                <video src="life advices/L2.mp4"></video>
+                <div class="text-overlay">An old mans advice.
+                </div>
+            </div>
+            <div class="video">
+                <video src="life advices/L3.mp4"></video>
+                <div class="text-overlay">Once You Stop Caring, Results Come | The Law of Reverse Effect</div>
+            </div>
+            <div class="video">
+                <video src="life advices/L4.mp4"></video>
+                <div class="text-overlay">The Best Life Advice You’ve Ever Heard is Probably Wrong
+                </div>
+            </div>
+            <div class="video">
+                <video src="life advices/L5.mp4"></video>
+                <div class="text-overlay">Stoicism: Become Undefeatable
+                </div>
+            </div>
+            <div class="video">
+                <video src="life advices/L6.mp4"></video>
+                <div class="text-overlay">You Don’t Deserve What You Want | Stoic Philosophy
+                </div>
+            </div>
+        </div>
+        <div class="popup-video" style="display: none;">
+            <span>&times;</span>
+            <video controls autoplay></video>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.video-container video').forEach(vid => {
+            vid.onclick = () => {
+                document.querySelector('.popup-video').style.display = 'block';
+                var popupVideo = document.querySelector('.popup-video video');
+                popupVideo.src = vid.getAttribute('src');
+                popupVideo.play();
+            }
+        });
+
+        document.querySelector('.popup-video span').onclick = () => {
+            var popupVideo = document.querySelector('.popup-video video');
+            popupVideo.pause();
+            popupVideo.src = '';
+            document.querySelector('.popup-video').style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>

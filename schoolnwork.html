@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mystyle.css">
+    <title>School and Work Advices</title>
+</head>
+
+<body>
+    <header>
+        <nav class="nav">
+            <a>InspireStream</a>
+            <div class="mid-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="life.html">Life Advices</a></li>
+                    <li><a href="love.html">Love Advices</a></li>
+                    <li><a href="schoolnwork.html">School & Work Advices</a></li>
+                    <li><a href="aboutus.html">About</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <h1>School and Work Advices</h1>
+        <div class="video-container">
+            <div class="video">
+                <video src="School&Work\W1.mp4"></video>
+                <div class="text-overlay">What Job Is Right For You ? Personality Test
+                </div>
+            </div>
+            <div class="video">
+                <video src="School&Work\W2.mp4"></video>
+                <div class="text-overlay">How to be Organized at Work: 8 Tips to Increase Productivity
+
+                </div>
+            </div>
+            <div class="video">
+                <video src="School&Work\W3.mp4"></video>
+                <div class="text-overlay">8 Productivity Tips for Work (that pay off forever)!
+                </div>
+            </div>
+            <div class="video">
+                <video src="School&Work\W4.mp4"></video>
+                <div class="text-overlay">Sadhguru's Ultimate Advice For Students & Young People - HOW TO SUCCEED IN
+                    LIFE
+                </div>
+            </div>
+            <div class="video">
+                <video src="School&Work\W5.mp4"></video>
+                <div class="text-overlay">5 habits that’ll make you a better student
+
+                </div>
+            </div>
+            <div class="video">
+                <video src="School&Work\W6.mp4"></video>
+                <div class="text-overlay">Jack Ma's Ultimate Advice for Students & Young People - HOW TO SUCCEED IN LIFE
+                </div>
+            </div>
+        </div>
+        <div class="popup-video" style="display: none;">
+            <span>&times;</span>
+            <video controls autoplay></video>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.video-container video').forEach(vid => {
+            vid.onclick = () => {
+                document.querySelector('.popup-video').style.display = 'block';
+                var popupVideo = document.querySelector('.popup-video video');
+                popupVideo.src = vid.getAttribute('src');
+                popupVideo.play();
+            }
+        });
+
+        document.querySelector('.popup-video span').onclick = () => {
+            var popupVideo = document.querySelector('.popup-video video');
+            popupVideo.pause();
+            popupVideo.src = '';
+            document.querySelector('.popup-video').style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>

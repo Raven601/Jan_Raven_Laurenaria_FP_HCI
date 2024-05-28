@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mystyle.css">
+    <title>School and Work Advices</title>
+</head>
+
+<body>
+
+    <header>
+        <nav class="nav">
+            <a>InspireStream</a>
+            <div class="mid-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="life.html">Life Advices</a></li>
+                    <li><a href="love.html">Love Advices</a></li>
+                    <li><a href="schoolnwork.html">School & Work Advices</a></li>
+                    <li><a href="aboutus.html">About</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="container">
+        <h1>School and Work Advices</h1>
+        <div class="video-container">
+            <div class="video">
+                <video src="Love Advices\LV1.mp4"></video>
+                <div class="text-overlay">LOVE LESSONS - 125+ Years of Marriage Advice in 3 Minutes
+
+                </div>
+            </div>
+            <div class="video">
+                <video src="Love Advices\LV2.mp4"></video>
+                <div class="text-overlay">This is how to love.
+                </div>
+            </div>
+            <div class="video">
+                <video src="Love Advices\LV3.mp4"></video>
+                <div class="text-overlay">LET THEM GO - Jim Rohn | Td Jakes & Joel Osteen | Steve Harvey Best
+                    Motivational Speech
+                </div>
+            </div>
+            <div class="video">
+                <video src="Love Advices\LV4.mp4"></video>
+                <div class="text-overlay">6 Signs You've Given Up On Love Unintentionally
+                </div>
+            </div>
+            <div class="video">
+                <video src="Love Advices\LV5.mp4"></video>
+                <div class="text-overlay">The Best Relationship Advice No One Tells You
+                </div>
+            </div>
+            <div class="video">
+                <video src="Love Advices\LV6.mp4"></video>
+                <div class="text-overlay">8 Signs of True Love
+                </div>
+            </div>
+            <div class="popup-video" style="display: none;">
+                <span>&times;</span>
+                <video controls autoplay></video>
+            </div>
+        </div>
+
+        <script>
+            document.querySelectorAll('.video-container video').forEach(vid => {
+                vid.onclick = () => {
+                    document.querySelector('.popup-video').style.display = 'block';
+                    var popupVideo = document.querySelector('.popup-video video');
+                    popupVideo.src = vid.getAttribute('src');
+                    popupVideo.play();
+                }
+            });
+
+            document.querySelector('.popup-video span').onclick = () => {
+                var popupVideo = document.querySelector('.popup-video video');
+                popupVideo.pause();
+                popupVideo.src = '';
+                document.querySelector('.popup-video').style.display = 'none';
+            }
+        </script>
+</body>
+
+</html>
